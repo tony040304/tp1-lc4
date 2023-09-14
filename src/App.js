@@ -1,23 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import ToggleRenderProps from './Commponent/ToggleRenderProps';
+import Toglee from './Commponent/Toglee';
+import Togleetip from './Commponent/Togleetip';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Componentes</h1>
+
+
+      <h2>Toggle con HOC</h2>
+      <Toglee>
+        <p>Contenido del Toggle con HOC</p>
+      </Toglee>
+
+
+      <h2>Tooltip con Render Props</h2>
+      <Togleetip text="Mensaje">
+        <button>Hover aqui</button>
+      </Togleetip>
+
+
+      <h2>Toggle con Render Props</h2>
+      <ToggleRenderProps>
+        <p>Contenido del Toggle con Render Props</p>
+      </ToggleRenderProps>
     </div>
   );
 }
